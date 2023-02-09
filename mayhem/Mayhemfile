@@ -1,0 +1,9 @@
+project: pysimdjson
+target: fuzz-api
+testsuite:
+    - file://mayhem/testsuite
+
+cmds:
+  - cmd: /src/mayhem/fuzz_loads_dumps.py
+    libfuzzer: true
+    timeout: 5
