@@ -1,0 +1,8 @@
+project: savantenvs/pysimdjson
+target: fuzz-api
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-api/testsuite
+cmds:
+  - cmd: /mayhem/fuzz-api
+    libfuzzer: true
